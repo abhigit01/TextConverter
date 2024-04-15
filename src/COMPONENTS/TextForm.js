@@ -53,8 +53,8 @@ export default function TextForm(props) {
                 <div>
                     <button className="btn btn-primary mx-3 my-3" onClick={handleUpClick}> Convet Text to Upper_Case</button>
                     <button className="btn btn-primary mx-3 my-3" onClick={handleLowClick}> Convet Text to Lower_Case</button>
-                    <button className="btn btn-primary mx-3 my-3" onClick={clearText}>Clear Text</button>
                     <button className="btn btn-primary mx-3 my-3" onClick={handleUpLowClick}>All FIrst letter capital</button>
+                    <button className="btn btn-primary mx-3 my-3" onClick={clearText}>Clear Text</button>
                 </div>
                 
             </div>

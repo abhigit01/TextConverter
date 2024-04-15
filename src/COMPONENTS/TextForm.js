@@ -14,7 +14,6 @@ export default function TextForm(props) {
     const handleUpLowClick = () => {
             let newText = text.split(" ").map(el => el.charAt(0).toUpperCase() + el.slice(1)).join(" ");
             setText(newText);
-       
     }
     const clearText = () => {
         let newText = '';
@@ -25,8 +24,8 @@ export default function TextForm(props) {
     const handleOnChange = (event) => {
         // console.log("on change");
         setText(event.target.value);
-        console.log(text, text.length)
-        // text = event.target.value
+       
+        
     }
     // const textCount = () => {
     //     if (text == "") {
@@ -38,7 +37,14 @@ export default function TextForm(props) {
     //         return(b)
     //     }
     // }
-
+    // const countWords = () => {
+    //     let len;
+    //     len = text.split(" ").length;
+    //     if (len - 1 == "") {
+    //       return len.length - 1;
+    //     }
+    //     return len.length;
+    //   }
 
 
     const [text, setText] = useState('');
@@ -53,8 +59,8 @@ export default function TextForm(props) {
                 <div>
                     <button className="btn btn-primary mx-3 my-3" onClick={handleUpClick}> Convet Text to Upper_Case</button>
                     <button className="btn btn-primary mx-3 my-3" onClick={handleLowClick}> Convet Text to Lower_Case</button>
-                    <button className="btn btn-primary mx-3 my-3" onClick={handleUpLowClick}>All FIrst letter capital</button>
-                    <button className="btn btn-primary mx-3 my-3" onClick={clearText}>Clear Text</button>
+                    <button className="btn btn-primary mx-3 my-3" onClick={handleUpLowClick}> All FIrst Letter in Capital</button>
+                    <button className="btn btn-primary mx-3 my-3" onClick={clearText}> Clear Text</button>
                 </div>
                 
             </div>
@@ -62,8 +68,8 @@ export default function TextForm(props) {
                 <h1>
                     Your Text Summary
                 </h1>
-                <p> {text.split(' ').length} Words and {text.length} Characters</p>
-
+                {/* <p>{countWords} hello </p> */}
+                <p>  {text.split(" ").length} Words and {text.length} Characters</p>
             </div>
         </>
     )

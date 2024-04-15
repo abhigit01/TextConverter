@@ -28,8 +28,8 @@ export default function TextForm(props) {
                      
                 </div >
                 <div>
-                <button className="btn btn-primary mx-3" onClick={handleUpClick}> Convet Text to Upper_Case</button>
-                <button className="btn btn-primary mx-3" onClick={handleLowClick}> Convet Text to lower_Case</button>
+                <button className="btn btn-primary mx-3 my-3" onClick={handleUpClick}> Convet Text to Upper_Case</button>
+                <button className="btn btn-primary mx-3 my-3" onClick={handleLowClick}> Convet Text to lower_Case</button>
                 </div>
         </div>
         <div className="container my-3">

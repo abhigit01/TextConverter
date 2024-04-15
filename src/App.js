@@ -7,7 +7,7 @@ function App() {
     <>
     <Navbar title= "TesxtUtils" />
     <div className='container my-5'>
-    <TextForm heading= "ENTER THE TEXT TO CONVERT IN UPPER CASE" />
+    <TextForm heading= "Enter The Text To Convert In Upper Or Lower Case" />
 
     </div>
     </>

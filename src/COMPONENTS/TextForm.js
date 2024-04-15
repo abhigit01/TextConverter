@@ -11,6 +11,10 @@ export default function TextForm(props) {
         let newText = text.toLowerCase();
         setText(newText)
     }
+    const handleUpLowClick = () => {
+            let newText = text.split(" ").map(el => el.charAt(0).toUpperCase() + el.slice(1)).join(" ");
+            setText(newText);
+       2    }
     const clearText = () => {
         let newText = '';
         setText(newText)
@@ -46,9 +50,10 @@ export default function TextForm(props) {
 
                 </div >
                 <div>
-                    <button className="btn btn-primary mx-3 my-3" onClick={handleUpClick}> Convet Text to Upper_Case</button>
-                    <button className="btn btn-primary mx-3 my-3" onClick={handleLowClick}> Convet Text to Lower_Case</button>
-                    <button className="btn btn-primary mx-3 my-3" onClick={clearText}>Clear Text</button>
+                    <button className="btn btn-primary mx-3 my-2" onClick={handleUpClick}> Convet Text to Upper_Case</button>
+                    <button className="btn btn-primary mx-3 my-2" onClick={handleLowClick}> Convet Text to Lower_Case</button>
+                    <button className="btn btn-primary mx-3 my-2" onClick={clearText}>Clear Text</button>
+                    <button className="btn btn-primary mx-3 my-2" onClick={handleUpLowClick}>All FIrst letter capital</button>
                 </div>
                 
             </div>

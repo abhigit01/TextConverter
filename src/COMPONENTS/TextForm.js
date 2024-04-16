@@ -24,8 +24,11 @@ export default function TextForm(props) {
     const handleOnChange = (event) => {
         // console.log("on change");
         setText(event.target.value);
-       
-        
+    }
+    const copytext = ()=>{
+        var text = document.getElementById("mybox");
+        text.select();
+        navigator.clipboard.writeText(text.value);
     }
     // const textCount = () => {
     //     if (text == "") {
@@ -53,14 +56,15 @@ export default function TextForm(props) {
             <div className='container'>
                 <h1>{props.heading}</h1>
                 <div className="mb-3">
-                    <textarea className="form-control" placeholder='enter the text here to convert' value={text} onChange={handleOnChange} id="exampleFormControlTextarea1" rows="8"></textarea>
+                    <textarea className="form-control" placeholder='enter the text here to convert' value={text} onChange={handleOnChange} id="mybox" rows="8"></textarea>
 
                 </div >
                 <div>
-                    <button className="btn btn-primary mx-3 my-3" onClick={handleUpClick}> Convet Text to Upper_Case</button>
-                    <button className="btn btn-primary mx-3 my-3" onClick={handleLowClick}> Convet Text to Lower_Case</button>
+                    <button className="btn btn-primary mx-3 my-3" onClick={handleUpClick}> Convert Text to Upper_Case</button>
+                    <button className="btn btn-primary mx-3 my-3" onClick={handleLowClick}> Convert Text to Lower_Case</button>
                     <button className="btn btn-primary mx-3 my-3" onClick={handleUpLowClick}> All FIrst Letter in Capital</button>
                     <button className="btn btn-primary mx-3 my-3" onClick={clearText}> Clear Text</button>
+                    <button className="btn btn-primary mx-3 my-3" onClick={copytext}> Copy Text</button>
                 </div>
                 
             </div>
